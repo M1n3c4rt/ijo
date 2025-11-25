@@ -89,8 +89,8 @@ coerce fns var RightA (P _ b) x = coerce fns var LeftA b x
 coerce fns var LeftA x (Sum a _) = L $ coerce fns var LeftA x a
 coerce fns var RightA x (Sum _ b) = R $ coerce fns var LeftA x b
 
-coerce fns var arr (L x) (Product a b) = L $ coerce fns var arr x (Product a b)
-coerce fns var arr (R x) (Product a b) = R $ coerce fns var arr x (Product a b)
+coerce fns var arr (L x) (Product a b) = coerce fns var arr x (Product a b)
+coerce fns var arr (R x) (Product a b) = coerce fns var arr x (Product a b)
 
 coerce fns var arr U (Product a b) = P (coerce fns var arr U a) (coerce fns var arr U b)
 
