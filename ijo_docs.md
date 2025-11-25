@@ -34,7 +34,7 @@ Whenever applicable, ⇀ is biased towards the left halves of the product and su
 A valid ◯ program defines a single type function called 主. It has the same syntax as other type functions.
 
 One argument is provided in the command line.
-When the program is run, a decimal number (interpreted as a binary string) passed as the command line argument is coerced into the type described by the function body using a specific series of steps (described in the next section), and then the final value is displayed to the user.
+When the program is run, the provided value (syntax described later) is coerced into the type described by the function body using a specific series of steps (described in the next section), and then the final value is displayed to the user.
 
 # COERCION
 The heart of ◯ is the fact that _a function can be infered entirely from its type._ The behaviour for all possible combinations of two types are given below:
@@ -57,3 +57,13 @@ The heart of ◯ is the fact that _a function can be infered entirely from its t
 α×β ⇁ ◯       Trivial.
 α×β ⇁ γ⊕δ     Coerces β to γ⊕δ.
 α×β ⇁ γ×δ     Coerces α to γ and β to δ.
+
+# VALUES
+The following syntax is for values that inhabit types, which are only seen when passing input to the program or receiving output to it.
+- The unit                        U
+- A product of two values         P (x) (y)
+- The left value in a sum type    L (x)
+- The right value in a sum type   R (x)
+Parentheses are not required if x or y is U.
+
+For example, a value inhabiting a type ⟨◯⊕◯⟩×⟨◯⊕◯⟩ may look like P (L U) (R U).
