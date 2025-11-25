@@ -39,24 +39,24 @@ When the program is run, the provided value (syntax described later) is coerced 
 # COERCION
 The heart of ◯ is the fact that _a function can be infered entirely from its type._ The behaviour for all possible combinations of two types are given below:
 
-◯   ⇀ ◯       Trivial.
-◯   ⇀ γ⊕δ     Coerces ◯ to γ.
-◯   ⇀ γ×δ     Coerces ◯ to γ and ◯ to δ, and puts them in a pair.
-α⊕β ⇀ ◯       Trivial.
-α⊕β ⇀ γ⊕δ     Coerces α to γ or β to δ.
-α⊕β ⇀ γ×δ     Coerces α to γ×δ or β to γ×δ.
-α×β ⇀ ◯       Trivial.
-α×β ⇀ γ⊕δ     Coerces α to γ⊕δ.
-α×β ⇀ γ×δ     Coerces α to γ and β to δ.
-◯   ⇁ ◯       Trivial.
-◯   ⇁ γ⊕δ     Coerces ◯ to δ.
-◯   ⇁ γ×δ     Coerces ◯ to γ and ◯ to δ, and puts them in a pair.
-α⊕β ⇁ ◯       Trivial.
-α⊕β ⇁ γ⊕δ     Coerces α to γ or β to δ.
-α⊕β ⇁ γ×δ     Coerces α to γ×δ or β to γ×δ.
-α×β ⇁ ◯       Trivial.
-α×β ⇁ γ⊕δ     Coerces β to γ⊕δ.
-α×β ⇁ γ×δ     Coerces α to γ and β to δ.
+- ◯   ⇀ ◯       Trivial.
+- ◯   ⇀ γ⊕δ     Coerces ◯ to γ.
+- ◯   ⇀ γ×δ     Coerces ◯ to γ and ◯ to δ, and puts them in a pair.
+- α⊕β ⇀ ◯       Trivial.
+- α⊕β ⇀ γ⊕δ     Coerces α to γ or β to δ.
+- α⊕β ⇀ γ×δ     Coerces α to γ×δ or β to γ×δ.
+- α×β ⇀ ◯       Trivial.
+- α×β ⇀ γ⊕δ     Coerces α to γ⊕δ.
+- α×β ⇀ γ×δ     Coerces α to γ and β to δ.
+- ◯   ⇁ ◯       Trivial.
+- ◯   ⇁ γ⊕δ     Coerces ◯ to δ.
+- ◯   ⇁ γ×δ     Coerces ◯ to γ and ◯ to δ, and puts them in a pair.
+- α⊕β ⇁ ◯       Trivial.
+- α⊕β ⇁ γ⊕δ     Coerces α to γ or β to δ.
+- α⊕β ⇁ γ×δ     Coerces α to γ×δ or β to γ×δ.
+- α×β ⇁ ◯       Trivial.
+- α×β ⇁ γ⊕δ     Coerces β to γ⊕δ.
+- α×β ⇁ γ×δ     Coerces α to γ and β to δ.
 
 # VALUES
 The following syntax is for values that inhabit types, which are only seen when passing input to the program or receiving output to it.
